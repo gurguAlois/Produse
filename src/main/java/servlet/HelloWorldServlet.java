@@ -34,8 +34,16 @@ public class HelloWorldServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String name = request.getParameter("name");
+        String password = request.getParameter("password");
         this.name = name;
-        request.setAttribute("name", name+" portocala");
+
+        request.setAttribute("name", name);
+        request.setAttribute("password", password);
+        /*
+        UserDao userDao = new UserDao();
+        userDao.findByUserAndPassword(user, password);
+         */
         request.getRequestDispatcher("/result.jsp").forward(request, response);
+
     }
 }

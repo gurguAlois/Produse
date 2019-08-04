@@ -12,8 +12,10 @@
 </head>
 <body>
     <form method ="POST" action ="hello">
-        Name: <input type="text" name="name"><br>
+        Name: <input type="text" name="name">
+        Password: <input type="text" password="password"><br>
         <input type="submit" value="submit">
+
     </form>
 </body>
 </html>
