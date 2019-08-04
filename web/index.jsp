@@ -8,9 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>My Web Page</title>
+    <link rel="stylesheet" type = "text/css" href="css/application.css"/>
   </head>
   <body>
-  $END$
+  <a href="name.jsp">Go to Register</a><br>
+  <a href="login.jsp">Go To Login</a>
   </body>
 </html>

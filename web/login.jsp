@@ -11,11 +11,11 @@
     <title>Title</title>
 </head>
 <body>
-    <form method ="POST" action ="register">
-        Name: <input type="text" name="name">
-        Password: <input type="text" name="password"><br>
-        <input type="submit" value="submit">
+<form method ="POST" action ="login">
+    Name: <input type="text" name="name">
+    Password: <input type="text" name="password"><br>
+    <input type="submit" value="submit">
 
-    </form>
+</form>
 </body>
 </html>

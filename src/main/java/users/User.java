@@ -3,10 +3,17 @@ package users;
 import javax.persistence.*;
 import java.io.Serializable;
 
+@NamedQueries({
+    @NamedQuery(
+        name = "find_by_name",
+        query = "select u from User u where name = :name and password = :password"
+    )
+})
+
 @Entity
 @Table(name = "Users")
 
-public class Users implements Serializable {
+public class User implements Serializable {
 
     private static final String DESCRIERE_SEQUENCE = "descriere_id_seq";
 
@@ -14,7 +21,7 @@ public class Users implements Serializable {
     @SequenceGenerator(name = "descriere_generator ", sequenceName = DESCRIERE_SEQUENCE)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "descriere_generator")
     private int id;
-@Column
+@Column(unique = true)
     private String name;
 @Column
     private String password;
@@ -41,5 +48,8 @@ public class Users implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public User() {
     }
 }
